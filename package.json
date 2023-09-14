@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": ".eslintrc.js",
   "engines": {
-    "node": "14.17.3"
+    "node": "14.16.1"
   },
   "scripts": {
     "clean": "rimraf dist/{css/*,js/*,images/*}",
