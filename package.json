@@ -2,6 +2,9 @@
   "name": "com.portfolio.maksol",
   "version": "1.0.0",
   "main": ".eslintrc.js",
+  "engines": {
+    "node": "18.17.0",
+    "npm": "9.6.7"},
   "scripts": {
     "clean": "rimraf dist/{css/*,js/*,images/*}",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
