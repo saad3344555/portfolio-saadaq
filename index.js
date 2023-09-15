@@ -1,8 +1,12 @@
 const express = require('express');
 const path = require("path");
-const app = express();
-const port = process.env.port || port,; // Choose the port you want to run your server on
+const cors = require('cors');
 
+const app = express();
+const port = process.env.port || 8080; // Choose the port you want to run your server on
+
+
+app.use(cors());
 
 
 app.use(express.static(path.join(__dirname, '/public')));
