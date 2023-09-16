@@ -3,7 +3,7 @@ const path = require("path");
 const cors = require('cors');
 
 const app = express();
-const port = process.env.port || 8080; // Choose the port you want to run your server on
+const port = process.env.PORT || 8080; // Choose the port you want to run your server on
 
 
 app.use(cors());
