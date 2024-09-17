@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/56fbe8b5-94db-46b8-b592-0b39d47fb6b2/resourceGroups/portfolio-saadaq-79/providers/Microsoft.Web/sites/portfolio-saadaq-79",
+    "appService.deploySubpath": "."
+}
