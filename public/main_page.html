@@ -15,17 +15,7 @@
 
 	<div class="body-wrap boxed-container">
         <header class="site-header text-light">
-            <!-- <div class="container">
-                <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="#">
-								<img class="header-logo-image" src="/images/logo.svg" alt="Logo">
-                            </a>
-                        </h1>
-                    </div>
-                </div>
-            </div> -->
+          
         </header>
 
         <main>
@@ -62,7 +52,96 @@
                 <div class="features-extended-inner section-inner">
 					<div class="features-extended-wrap">
 						<div class="container">
-							<div class="feature-extended">
+
+							<div id="features-container" class="features-list"></div>
+							<script>
+								const features = [
+								{
+									title: "NZ Chat",
+									description: "NZ Chat is the easy and secure way to communicate, closing the distance between family, friends, and loved ones for free. With voice and video calls, messages, and a limitless variety of exciting stickers, you’ll be able to express yourself in ways that you never thought possible. ",
+									image: "/images/nz-chat.webp",
+									links: [
+									  { url: "https://play.google.com/store/apps/details?id=com.KTC.NZChat&hl=en", icon: "/images/gplay1.png" },
+									  { url: "https://apps.apple.com/th/app/nz-chat/id6447769784", icon: "/images/astore1.png" }
+									]
+								  },
+								{
+									title: "Al Faris App",
+									description: "Developed for Al Faris Schools Riyadh, KSA. Al Faris schools app manages the internal operations of the school from student management to teachers association, co-ordination and fees payments.",
+									image: "/images/alfaris.webp",
+									links: [
+									  { url: "https://play.google.com/store/apps/details?id=com.app.alfaris_mobile&hl=en", icon: "/images/gplay1.png" },
+									  { url: "https://apps.apple.com/eg/app/al-faris-app/id6478220883", icon: "/images/astore1.png" }
+									]
+								  },
+								  {
+									title: "Catablack Project",
+									description: "Contribute to the development of Catablack project. Ride hailing service based app developed for USA based client company which has unique features to book, negotiate and live view your rides.",
+									image: "/images/catablack.webp",
+									links: [
+									  { url : "https://play.google.com/store/apps/details?id=com.dd.catablackcar&hl=en&gl=US", icon: "/images/gplay1.png" },
+									  { url : "https://apps.apple.com/us/app/cata-black-car-chauffeurs-mia/id1260455464", icon: "/images/astore1.png" }
+									]
+								  },
+								  {
+									title: "Tiny Genius Project - Learning App For Kids",
+									description: "Developed for Sweden Based Company - The Tiny Genius provides a tried-and-true method for creating a socially connected learning environment for kids...",
+									image: "/images/tiny_genius.webp",
+									links: [
+									  { url: "https://play.google.com/store/apps/details?id=com.thelearningapps.kidseducationalgames&hl=en_ZA&gl=US", icon: "/images/gplay1.png" },
+									  { url: "https://apps.apple.com/us/app/tiny-genius-learning-game-kids/id1620511193", icon: "/images/astore1.png" }
+									]
+								  },
+								  {
+									title: "Mind Cloud Mindfulness App",
+									description: "Developed for Company Activity Youth in New Zealand. Within this app - you can follow 20+ guided meditation courses and improve your mental health...",
+									image: "/images/mindcloud.webp",
+									links: [
+									  { url: "https://play.google.com/store/apps/details?id=com.activityyouth.sleep_plan", icon: "/images/gplay1.png" },
+									  { url: "https://apps.apple.com/us/app/mindcloud-mindful-practices/id1622011173", icon: "/images/astore1.png" }
+									]
+								  },
+								  {
+									title: "Cash-Cash 243 - Fintech App",
+									description: "Developed for Congo Based Fintech Startup - Cash-Cash 243 app brings one of the best fintech platform to the users looking for a system where they can easily send and receive money...",
+									image: "/images/cash_cash.webp",
+									links: [
+									  { url: "https://play.google.com/store/apps/details?id=com.cashcash.app.cash_cash_customer", icon: "/images/gplay1.png" },
+									  { url: "https://play.google.com/store/apps/details?id=com.cashcash.app.cash_cash_customer", icon: "/images/astore1.png" }
+									]
+								  }
+								];
+							  
+								const container = document.getElementById("features-container");
+							  
+								features.forEach((feature) => {
+								  const featureDiv = document.createElement("div");
+								  featureDiv.className = "feature-extended";
+							  
+								  featureDiv.innerHTML = `
+									<div class="feature-extended-image">
+									  <img class="device-mockup is-revealing" src="${feature.image}" alt="${feature.title}">
+									  <ul class="footer-links list-reset">
+										${feature.links.map(link => `
+										  <li>
+											<a href="${link.url}" target="_blank">
+											  <img class="device-mockup is-revealing" src="${link.icon}" alt="Store link">
+											</a>
+										  </li>
+										`).join('')}
+									  </ul>
+									</div>
+									<div class="feature-extended-body is-revealing">
+									  <h3 class="mt-0 mb-16">${feature.title}</h3>
+									  <p class="m-0">${feature.description}</p>
+									</div>
+								  `;
+							  
+								  container.appendChild(featureDiv);
+								});
+							  </script>
+
+							<!-- <div class="feature-extended">
 								<div class="feature-extended-image">
 									
 									<img class="device-mockup is-revealing" src="/images/catablack.webp" alt="iPhone Feature 01">
@@ -177,6 +256,65 @@
 									<p class="m-0">Developed for Congo Based Fintech Startup - Cash-Cash 243 app brings one of the best fintech platform to the users looking for a system where they can easily send and receive money using their multiple accounts and currencies, in fact one can also send request to your friend to send money in own account, customers can do transactions manually and also through the QR scanning, more over it provides customers the opportunity to participate in competitions and win exciting prizes. In this app, one will always be rewarded even if one just keep some amount for a while in saving's account. One can track the debit/credit history from the wallet, can also create and add family members through the main account.</p>
 								</div>
 							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									
+
+									<img class="device-mockup is-revealing" src="/images/cash_cash.webp" alt="iPhone Feature 04">
+								
+									<ul class="footer-links list-reset">
+										<li>
+											<a href="https://play.google.com/store/apps/details?id=com.cashcash.app.cash_cash_customer">
+												<img class="device-mockup is-revealing" src="/images/gplay1.png" alt="iPhone Feature 01">
+
+											</a>
+										</li>
+										<li>
+											<a href="https://play.google.com/store/apps/details?id=com.cashcash.app.cash_cash_customer">
+												<img class="device-mockup is-revealing" src="/images/astore1.png" alt="iPhone Feature 01">
+
+											</a>
+										</li>
+										
+									</ul>
+								
+								
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Cash-Cash 243 - Fintech App</h3>
+									<p class="m-0">Developed for Congo Based Fintech Startup - Cash-Cash 243 app brings one of the best fintech platform to the users looking for a system where they can easily send and receive money using their multiple accounts and currencies, in fact one can also send request to your friend to send money in own account, customers can do transactions manually and also through the QR scanning, more over it provides customers the opportunity to participate in competitions and win exciting prizes. In this app, one will always be rewarded even if one just keep some amount for a while in saving's account. One can track the debit/credit history from the wallet, can also create and add family members through the main account.</p>
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									
+
+									<img class="device-mockup is-revealing" src="/images/cash_cash.webp" alt="iPhone Feature 04">
+								
+									<ul class="footer-links list-reset">
+										<li>
+											<a href="https://play.google.com/store/apps/details?id=com.cashcash.app.cash_cash_customer">
+												<img class="device-mockup is-revealing" src="/images/gplay1.png" alt="iPhone Feature 01">
+
+											</a>
+										</li>
+										<li>
+											<a href="https://play.google.com/store/apps/details?id=com.cashcash.app.cash_cash_customer">
+												<img class="device-mockup is-revealing" src="/images/astore1.png" alt="iPhone Feature 01">
+
+											</a>
+										</li>
+										
+									</ul>
+								
+								
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Cash-Cash 243 - Fintech App</h3>
+									<p class="m-0">Developed for Congo Based Fintech Startup - Cash-Cash 243 app brings one of the best fintech platform to the users looking for a system where they can easily send and receive money using their multiple accounts and currencies, in fact one can also send request to your friend to send money in own account, customers can do transactions manually and also through the QR scanning, more over it provides customers the opportunity to participate in competitions and win exciting prizes. In this app, one will always be rewarded even if one just keep some amount for a while in saving's account. One can track the debit/credit history from the wallet, can also create and add family members through the main account.</p>
+								</div>
+							</div> -->
+
 						</div>
 					</div>
                 </div>
