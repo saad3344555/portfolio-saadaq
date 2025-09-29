@@ -11,6 +11,8 @@ body {
     background-color: #333;
     color: #f10e0e;
     text-align: center;
+    line-height: 0;
+    border: none;
     padding: 1rem;
   }
   
